@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>images</title>
+</head>
+<body>
+	<div style="width:1200px;height:600px;background-color:skyblue;">
+		<div style="width:600px;height:600px;float: left;background-color:skyblue;">
+			<div style="width:200px;height:600px;float: left;background-color:skyblue;">
+				<img src="ty.jpeg"style="height: 300px;width: 150px;padding-top: 100px;padding-left: 20px;"onclick="getimg('ty.jpeg')">
+			</div>
+			<div style="width:200px;height:600px;float: left;background-color:blue;">
+				<img src="ze.jpeg"style="height: 300px;width: 150px;padding-top: 100px;padding-left: 20px;"onclick="getimg('ze.jpeg')">
+			</div>
+			<div  style="width:200px;height:600px;float: right;background-color:skyblue;">
+				<img src="zir.jpeg"style="height: 300px;width: 150px;padding-top: 100px;padding-left: 20px;"onclick="getimg('zir.jpeg')">
+			</div>
+			
+		</div>
+		<div style="width:60px;height:600px;float: left;background-color:white;">	
+		</div>
+		<div style="width:540px;height:600px;float: right;background-color:blue;"id="oupt">	
+		</div>
+	</div>
+	<script type="text/javascript">
+		function getimg(img_path){
+			document.getElementById('oupt').innerHTML="<img src='"+img_path+"'style='width:540px;height:600px'/>";
+		}
+	</script>
+
+</body>
+</html>

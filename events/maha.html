@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sairam</title>
+</head>
+<body>
+<center>
+
+<img id="myImage" onclick="changeImage()" src="candleon.jpeg" width="1500" height="700">
+</center>
+
+
+<script>
+function changeImage() {
+  var image = document.getElementById('myImage');
+  if (image.src.match("p1")) {
+    image.src = "candleon.jpeg";
+  } else {
+    image.src = "candleoff.jpeg";
+  }
+}
+</script>
+
+</body>
+</html>

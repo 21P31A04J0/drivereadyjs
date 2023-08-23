@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {
+  width: 350px;
+  height: 500px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  float: left;
+  margin-left: 40px;
+}
+#div2 {
+  width: 350px;
+  height: 500px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  float: right;
+  margin-right: 500px;
+}
+#div3{
+  width: 100px;
+  height: 250px;
+  border: 1px solid white;
+  float: left;
+  margin-left: 30px;
+  margin-top: 100px;
+}
+.a{
+  width: 20px;
+  margin-top: 100px;
+  padding-top: 150px;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<p>Drag the W3Schools image into the rectangle:</p>
+
+<div id="div1" on click="aa"ondrop="drop(event)" ondragover="allowDrop(event)"float="left">
+<br>
+<img id="drag1" src="1.jpeg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<img id="drag2" src="2.jpeg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<img id="drag3" src="3.jpeg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<img id="drag4" src="4.jpeg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<img id="drag5" src="5.jpeg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+</div>
+<div id="div3"><p onclick="aa" style='font-size:50px;padding-left: 25px'>&#8594;</p>
+<p onclick="bb"style='font-size:50px;padding-left: 25px'>&#8592; </p></div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"float="right">
+<br>
+<img id="drag6" src="6.jpeg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<img id="drag7" src="ze.jpeg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+</div>
+<script type="text/javascript">
+  function aa(){
+    document.getElementById('div1').src()
+  }
+</script>
+</body>
+</html>
+

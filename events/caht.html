@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game</title>
+    <style type="text/css">
+        #a{
+            background-color: green;
+             border-radius: 4px;
+        }
+    </style>
+   
+</head>
+<body>
+    <center>
+    <input type="radio" name="option" value="1"> 1
+    <input type="radio" name="option" value="2"> 2
+    <input type="radio" name="option" value="3"> 3
+    <br>
+    <br>
+
+    <input type="text" id="textBox" placeholder="Enter your guess"><br><br>
+
+    <button onclick="checkResult()"id="a">Check Result</button>
+    <p id="result"></p>
+     <script>
+        function checkResult() {
+            var radioButtonValue = document.querySelector('input[name="option"]:checked').value;
+            var textBoxValue = document.getElementById('textBox').value;
+
+            if (radioButtonValue === textBoxValue) {
+                document.getElementById('a').innerText = "You Won";
+            } else {
+                document.getElementById('a').innerText = "Oops loss";
+            }
+        }
+    </script>
+    </center>
+</body>
+</html>

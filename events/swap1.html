@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+        }
+        
+        .left {
+            flex: 1;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .middle {
+            flex: 1;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .right {
+            flex: 1;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        
+        .image {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+        }
+        
+        #emptySpaceRight {
+            width: 50px;
+            height: 50px;
+            border: 1px dashed gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img class="image" src="3.jpeg" id="image3" onclick="selectImage('image3', 'left')">
+            <img class="image" src="4.jpeg" id="image4" onclick="selectImage('image4', 'left')">
+            <img class="image" src="5.jpeg" id="image5" onclick="selectImage('image5', 'left')">
+        </div>
+        <div class="middle">
+            <button id="button1">Button 1</button>
+            <br>
+            <button id="button2">Button 2</button>
+        </div>
+        <div class="right">
+            <img class="image" src="1.jpeg" id="image1" onclick="selectImage('image1', 'right')">
+            <img class="image" src="2.jpeg" id="image2" onclick="selectImage('image2', 'right')">
+            <div id="emptySpaceRight"></div>
+        </div>
+    </div>
+
+    
+    <script>
+        let selectedImageId = null;
+        let selectedSide = null;
+
+        function selectImage(imageId, side) {
+            selectedImageId = imageId;
+            selectedSide = side;
+        }
+
+        document.getElementById("button1").addEventListener("click", function() {
+            if (selectedImageId && selectedSide === "left") {
+                const emptySpaceRight = document.getElementById("emptySpaceRight");
+                const selectedImage = document.getElementById(selectedImageId);
+
+                if (emptySpaceRight.innerHTML === "") {
+                    emptySpaceRight.appendChild(selectedImage);
+                    selectedImage.style.cursor = "auto";
+                }
+
+                selectedImageId = null;
+                selectedSide = null;
+            }
+        });</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+const person = {fname:"John", lname:"Doe", age:25};
+
+let text = "";
+for (let x in person) {
+  text += person[x];
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fsd</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a=10;
+		document.write(typeof(a)+"<br>");
+		var name='sneha';
+		document.write(typeof(name)+"<br>");
+		var gender=true
+		document.write(typeof(gender)+"<br>");
+		var arr=[10,'likhitha',30];
+		var trainee=[{
+			'name':'sneha',
+			'rollno':1234,
+			'college':'acet',
+			'branch':'Ece'
+		},
+		{
+			'name':'sneha',
+			'rollno':1234,
+			'college':'acet',
+			'branch':'Ece'
+		}]
+		console.log(trainee[0].name);
+		console.log(trainee[1].name);
+		console.log(trainee[0].rollno);
+		console.log(trainee[1].rollno);
+		console.log(trainee[0].college);
+		console.log(trainee[1].college);
+		console.log(trainee[0].branch);
+		console.log(trainee[1].branch);
+
+
+
+	</script>
+
+</body>
+</html>

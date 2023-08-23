@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <title>catt</title>
+  <style type="text/css">
+    .aa{
+      height: 200px;
+      margin-left: 20px;
+    }
+    .bb{
+      height:300px;
+      margin-left: -20px;
+    }
+    .cc{
+      height: 150px;
+      width: 300px;
+      background: grey;
+      border-radius: 30px;
+    }
+    .mt{
+      padding-top: 15px;
+    }
+    .on{
+      height: 50px;
+      width: 100px;
+      background: lightgrey;
+      border-radius: 10px;
+
+    }
+    .off{
+      height: 50px;
+      width: 100px;
+      background: red;
+      border-radius: 10px;
+
+    }
+    .bg{
+      background: black;
+    }
+  </style>
+</head>
+<body>
+<div class="bg">
+  <div>
+  <center>
+  <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png" class="aa" id="bulb">
+  </center>
+  </div>
+
+  <div>
+  <center>
+  <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png" class="bb" id="cat">
+  </center>
+  </div>
+
+  <center>
+  <div class="cc mt-5 ">
+    <h4 class="mt" id="switch" >Switch Off</h4>
+    <button class="on mt-4" id="on" onclick="switchOn()">On</button>
+    <button class="off mt-4" id="off" onclick="switchOff()">Off</button>
+  </div>
+  </center>
+  <br>
+</div>
+<script type="text/javascript">
+  function switchOn(){
+    document.getElementById('on').style.backgroundColor="lightgrey";
+    document.getElementById('off').style.backgroundColor="red";
+    document.getElementById('switch').textContent="Switch On";
+    document.getElementById('bulb').src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png"
+    document.getElementById('cat').src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png"
+  }
+  function switchOff(){
+    document.getElementById('on').style.backgroundColor="green";
+    document.getElementById('off').style.backgroundColor="lightgrey";
+    document.getElementById('switch').textContent="Switch Off";
+    document.getElementById('bulb').src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png"
+    document.getElementById('cat').src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png"
+  }
+</script>
+</body>
+</html>

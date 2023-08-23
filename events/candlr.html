@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <title>catt</title>
+  <style type="text/css">
+    .aa{
+      height: 400px;
+      margin-left: 20px;
+    }
+    .cc{
+      height: 150px;
+      width: 300px;
+      background: grey;
+      border-radius: 30px;
+    }
+    .mt{
+      padding-top: 15px;
+    }
+    .on{
+      height: 50px;
+      width: 100px;
+      background: lightgrey;
+      border-radius: 10px;
+
+    }
+    .off{
+      height: 50px;
+      width: 100px;
+      background: red;
+      border-radius: 10px;
+
+    }
+    .bg{
+      background: black;
+    }
+  </style>
+</head>
+<body>
+<div class="bg">
+  <div>
+  <center>
+  <img src="candleon.jpeg" class="aa" id="bulb">
+  </center>
+  </div>
+
+
+  <center>
+  <div class="cc mt-5 ">
+    <h4 class="mt" id="switch" >Switch Off</h4>
+    <button class="on mt-4" id="on" onclick="switchOn()">On</button>
+    <button class="off mt-4" id="off" onclick="switchOff()">Off</button>
+  </div>
+  </center>
+  <br>
+</div>
+<script type="text/javascript">
+  function switchOn(){
+    document.getElementById('switch').textContent="Switch On";
+    document.getElementById('bulb').src="candleon.jpeg"
+  }
+  function switchOff(){
+    document.getElementById('switch').textContent="Switch Off";
+    document.getElementById('bulb').src="candleoff.jpeg"
+  }
+</script>
+</body>
+</html>

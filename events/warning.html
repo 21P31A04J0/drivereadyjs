@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		input{
+			outline:none;
+		}
+	</style>
+</head>
+<body>
+	<label>Enter Name</label>
+	<input type="text" onkeyup="sample(this.value)" id="ins">
+	<br>
+	<span id="sp_id"></span>
+	<script type="text/javascript">
+		function sample(str){
+			if(str==''){
+				document.getElementById('ins').style.border='1px solid red';
+				document.getElementById('sp_id').innerText='please enter your name';
+		    	document.getElementById('sp_id').style.color='red';		
+
+			}
+			else{
+				document.getElementById('ins').style.border='1px solid black';
+				document.getElementById('sp_id').innerText=' ';
+
+			}
+			if(str.length<4){
+				document.getElementById('sp_id').innerText='please enter more than 3 characters';
+				document.getElementById('sp_id').style.color='blue';		
+			}
+			else{
+				document.getElementById('sp_id').innerText='ok enter';
+				document.getElementById('sp_id').style.color='blue';
+			}
+
+
+		}
+	</script>
+
+</body>
+</html>

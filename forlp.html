@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fsd</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var trainee=[{
+			'name':'sneha',
+			'rollno':1234,
+			'college':'acet',
+			'branch':'Ece'
+		},
+		{
+			'name':'sneha',
+			'rollno':1234,
+			'college':'acet',
+			'branch':'Ece'
+		}]
+		var trainees=[{
+			'name':'sneha',
+			'rollno':1234,
+			'college':'acet',
+			'branch':'Ece'
+		},
+		{
+			'name':'sneha',
+			'rollno':1234,
+			'college':'acet',
+			'branch':'Ece'
+		}]
+for( let i=0;i<trainee.length;i++)
+	for( let j=0;j<trainees.length;j++){
+	for(key in trainee[i],trainees[j]){
+		document.write(trainee[i][key]+" ")
+	}
+	document.write("<br>")
+}
+
+
+
+	</script>
+
+</body>
+</html>
